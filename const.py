@@ -35,8 +35,11 @@ HELP_KB = InlineKeyboardMarkup(
 
 
 #START_MSG = "Hi **[{}](tg://user?id={})**, I am a an autofilter bot which finds & shares media from my database."
-START_MSG ="""Hi <b><a href='tg://user?id={user_id}'>{name}</a></b>,  
-ഞാൻ ഒരു <b>AUTO FILTER BOT</b> ആണ്, എന്റെ ഉടമസ്ഥർ <a href='https://t.me/+sZr3rX7Al48yZTI1'>CINEMA-HUB</a> ആണ്, നിങ്ങൾക്കും നിങ്ങളുടെ ഗ്രൂപ്പുകളിൽ ഇപ്പോൾ എന്നെ ഉപയോഗിക്കാവുന്നതാണ്"""
+START_MSG ="""𝖧𝖾𝗒 <b><a href='tg://user?id={user_id}'>{name}</a></b>,𝖨 𝖠𝗆 <a href='@ProSilkMovie_Bot'>⌈𝙎𝙕𝞓」</a>
+
+𝖨𝖺𝗆 𝖯𝗈𝗐𝖾𝗋𝖥𝗎𝗅𝗅 𝖠𝗎𝗍𝗈 𝖥𝗂𝗅𝗍𝖾𝗋 + 𝖬𝗈𝗏𝗂𝖾 𝖲𝖾𝖺𝗋𝖼𝗁 + 𝖬𝖺𝗇𝗎𝖺𝗅 𝖥𝗂𝗅𝗍𝖾𝗋 𝖡𝗈𝗍 ⚙
+
+Here You Can Request Movie's, Just Sent <a href='https://t.me/ProSilkMovie_Bot'>Movie Name</a> With Proper <a href='https://www.google.com/'>Google</a> Spelling..!!</b>"""
 
 ST_HELP_MSG = """
 **You can find the bot commands here.**
@@ -51,8 +54,8 @@ ST_HELP_MSG = """
 - __If List, bot will return results in list format__
 - __If HyperLink, bot will return results in hyperlink format__"""
 
-ABOUT_MSG = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: <a href='https://t.me/OggycinemaHUB_BOT'>OGGY BOT</a>
-✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/BATMAN_CINEMAHUB'>Tʜɪs ᴘᴇʀsᴏɴ</a>
+ABOUT_MSG = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: <a href='https://t.me/ProSilkMovie_Bot'>⌈𝙎𝙕𝞓」</a>
+✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/TheAdamantiumGuy'>Tʜɪs ᴘᴇʀsᴏɴ</a>
 ✯ Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>
 ✯ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>
 ✯ DᴀᴛᴀBᴀsᴇ: <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>
