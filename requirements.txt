@@ -1,0 +1,17 @@
+APScheduler==3.10.4
+greenlet==3.0.3
+psutil
+psycopg2-binary==2.9.9
+pyaes==1.6.1
+pymediainfo
+pyrotgfork
+PySocks==1.7.1
+python-dotenv
+pytz
+six==1.16.0
+SQLAlchemy==2.0.30
+TgCrypto
+typing_extensions
+tzlocal
+uvloop
+redis
