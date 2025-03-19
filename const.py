@@ -13,15 +13,11 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 START_KB = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton('🔗 ᴏᴜʀ ᴄʜᴀɴᴇʟꜱ ʟɪɴᴋꜱ 🔗', url='https://t.me/CINEMAHUB_LINK')
+           InlineKeyboardButton("🖥 Oᴛᴛ Uᴩᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ 🖥", url="https://t.me/+EcKqKBOrLHE3YTZl")
+            ],[                    
+            InlineKeyboardButton("⚙ Bᴏᴛ Mᴏᴠɪᴇ Gʀᴏᴜᴩ ⚙", url='https://t.me/Cinemakalavara_Group') 
             ],[
-            InlineKeyboardButton('📌 ᴍʏ ɢʀᴏᴜᴘ', url='https://t.me/+rotT30StVG1hYmZl'),
-            InlineKeyboardButton('🛠 ᴍʏ ᴏᴡɴᴇʀ', url='https://t.me/BATMAN_CINEMAHUB')
-            ],[
-            InlineKeyboardButton('⚠️ ʜᴇʟᴘ', callback_data='help_cb'),
-            InlineKeyboardButton('⚙️ ᴀʙᴏᴜᴛ', callback_data='about_cb')
-            ],[
-            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url='https://t.me/OGGYCINEMAHUB_BOT?startgroup=true')           
+            InlineKeyboardButton("⚓ Lᴀᴛᴇꜱᴛ Mᴏᴠɪᴇ Rᴇʟᴇᴀꜱᴇꜱ ⚓", url='https://t.me/+HVEtxLyGtrs2YTI1')            
         ]
     ]
 )
