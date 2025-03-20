@@ -398,7 +398,6 @@ async def send_file(admin_settings, bot, query, user_id, file_id):
             f_caption = fname_caption + "\n\n" + admin_settings.custom_caption
         elif f_caption is None:
             f_caption = f"{files.file_name}"
-        # f_caption = "`" + f_caption + "`"
         f_caption = "**" + f_caption + "**"
 
     if admin_settings.caption_uname:
@@ -408,6 +407,13 @@ async def send_file(admin_settings, bot, query, user_id, file_id):
         mesg = query.message
     elif isinstance(query, Message):
         mesg = query
+
+    # Define buttons
+    buttons = [
+        [InlineKeyboardButton("🔗 Group", url="https://t.me/TG_Moviesjunction")],
+        [InlineKeyboardButton("🎬 Movies Channel", url="https://t.me/MovieKingdomTG")]
+    ]
+    reply_markup = InlineKeyboardMarkup(buttons)
 
     info = None
     if admin_settings.info_msg and admin_settings.info_img:
@@ -438,6 +444,7 @@ async def send_file(admin_settings, bot, query, user_id, file_id):
                 file_id=file_id,
                 caption=f_caption,
                 parse_mode=ParseMode.MARKDOWN,
+                reply_markup=reply_markup  # Added buttons
             )
         else:
             msg = await mesg.reply_cached_media(
@@ -445,6 +452,7 @@ async def send_file(admin_settings, bot, query, user_id, file_id):
                 caption=f_caption,
                 parse_mode=ParseMode.MARKDOWN,
                 quote=True,
+                reply_markup=reply_markup  # Added buttons
             )
     except MediaEmpty:
         LOGGER.warning("File not found: %s", str(file_id))
@@ -500,14 +508,14 @@ async def send_file(admin_settings, bot, query, user_id, file_id):
                 trigger,
                 args=[msg.chat.id, msg.id, txt],
                 max_instances=500000,
-                misfire_grace_time=100,
+                misfire_grace_time=500,
             )
             scheduler.add_job(
                 del_message,
                 trigger,
                 args=[disc.chat.id, disc.id],
                 max_instances=500000,
-                misfire_grace_time=200,
+                misfire_grace_time=500,
             )
         except AttributeError as e:
             LOGGER.warning("Error occurred while deleting file: %s", str(e))
