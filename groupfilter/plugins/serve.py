@@ -244,7 +244,7 @@ async def get_result(search, page_no, user_id, username, chat_id):
         crnt_pg = index // 10 + 1
         tot_pg = (count + 10 - 1) // 10
         btn_count = 0
-        result = f"**Search Query:** `{search}`\n**Total Results:** `{count}`\n**Page:** `{crnt_pg}/{tot_pg}`\n"
+        result = f"<b>📁 𝐇𝐞𝐫𝐞 𝐢𝐬 𝐖𝐡𝐚𝐭 𝐈 𝐅𝐨𝐮𝐧𝐝 𝐈𝐧 𝐌𝐲 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞 𝐅𝐨𝐫 𝐘𝐨𝐮𝐫 𝐐𝐮𝐞𝐫𝐲 👇\n\n🍂 𝐌𝐨𝐯𝐢𝐞 𝐍𝐚𝐦𝐞 : `{search}`"
         page = page_no
 
         for file in files["files"]:
