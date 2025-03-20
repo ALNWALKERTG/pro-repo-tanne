@@ -244,7 +244,7 @@ async def get_result(search, page_no, user_id, username, chat_id):
         crnt_pg = index // 10 + 1
         tot_pg = (count + 10 - 1) // 10
         btn_count = 0
-        result =f"<b>📁 𝐇𝐞𝐫𝐞 𝐢𝐬 𝐖𝐡𝐚𝐭 𝐈 𝐅𝐨𝐮𝐧𝐝 𝐈𝐧 𝐌𝐲 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞 𝐅𝐨𝐫 𝐘𝐨𝐮𝐫 𝐐𝐮𝐞𝐫𝐲 👇\n\n🍂 𝐌𝐨𝐯𝐢𝐞 𝐍𝐚𝐦𝐞 : #{search.replace(' ', '_')}</b>"
+        result = f"**Search Query:** `{search}`\n**Total Results:** `{count}`\n**Page:** `{crnt_pg}/{tot_pg}`\n"
         page = page_no
 
         for file in files["files"]:
@@ -393,17 +393,7 @@ async def send_file(admin_settings, bot, query, user_id, file_id):
     f_caption = ""
     for files in filedetails:
         f_caption = files.caption
-        fname_caption ="""<b>𝐻𝑒𝑙𝑙𝑜 👋 {mention} 😍
-
-{file_name}
-    
-⚙️ Fɪʟᴇ Sɪᴢᴇ :  {file_size}
-
- ╔═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╗
- ♻️ 𝑱𝑶𝑰𝑵 :- <a href=https://t.me/TG_Moviesjunction> 𝐆𝐑𝐎𝐔𝐏 </a>
- ♻️ 𝑱𝑶𝑰𝑵 :- <a href=https://t.me/KM_Updates> 𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 </a>
- ♻️ 𝑱𝑶𝑰𝑵 :- <a href=https://t.me/MovieKingdomTG> 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 </a>
- ╚═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╝</b>"""
+        fname_caption = f"📂 Fɪʟᴇɴᴀᴍᴇ : {files.file_name}"
         if admin_settings.custom_caption:
             f_caption = fname_caption + "\n\n" + admin_settings.custom_caption
         elif f_caption is None:
