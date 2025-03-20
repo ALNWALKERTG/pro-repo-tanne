@@ -77,9 +77,7 @@ async def check_fsub(
             else:
                 await msg.reply_text(txt, reply_markup=kb, quote=True)
                 return False
-            else:
-                await msg.reply_text(txt, reply_markup=kb, quote=True)
-                return False
+            
     except Exception as e:
         LOGGER.warning(e)
         await msg.reply_text(
