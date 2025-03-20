@@ -64,20 +64,19 @@ async def check_fsub(
                 await asyncio.sleep(10)
                 await kkpp.delete()
                 return False
-  elif admin_settings.fsub_msg and not admin_settings.fsub_img:
-    kkpp = await msg.reply_text(
-      text=txt,
-      reply_markup=kb,
-      parse_mode=ParseMode.MARKDOWN,
-      quote=True,
-    )
-    await asyncio.sleep(10)
-    await kkpp.delete()
-    return False
-  else:
-    await msg.reply_text(txt, reply_markup=kb, quote=True)
-    return False
-
+            elif admin_settings.fsub_msg and not admin_settings.fsub_img:
+                kkpp = await msg.reply_text(
+                    text=txt,
+                    reply_markup=kb,
+                    parse_mode=ParseMode.MARKDOWN,
+                    quote=True,
+                )
+                await asyncio.sleep(10)
+                await kkpp.delete()
+                return False
+            else:
+                await msg.reply_text(txt, reply_markup=kb, quote=True)
+                return False
             else:
                 await msg.reply_text(txt, reply_markup=kb, quote=True)
                 return False
