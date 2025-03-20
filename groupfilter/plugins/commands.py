@@ -28,8 +28,8 @@ async def start(bot, update):
             LOGGER.warning(e)
             start_msg = STARTMSG.format(name=name, user_id=user_id, user_name=user_name)
 
-        await update.reply_video(
-            video="https://envs.sh/JXQ.mp4",
+        await update.reply_photo(
+            photo="https://envs.sh/bFL.jpg",
             caption=start_msg,
             reply_to_message_id=update.reply_to_message_id,
             reply_markup=START_KB,
