@@ -402,7 +402,7 @@ async def send_file(admin_settings, bot, query, user_id, file_id):
     file_size = humanize.naturalsize(files.file_size, binary=True) if hasattr(files, 'file_size') else "Unknown Size"
 
     # Fully bold caption with proper formatting
-     f_caption = f"""
+    f_caption = f"""
 **𝐻𝑒𝑙𝑙𝑜 👋 {mention_user}** 
 
 📂 **{file_name}**
