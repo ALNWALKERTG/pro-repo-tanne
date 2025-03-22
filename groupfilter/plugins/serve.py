@@ -418,19 +418,6 @@ async def send_file(admin_settings, bot, query, user_id, file_id):
 ⚠️ **Files will be deleted in 3 minutes.**  
 **Forward this file to any chat (saved) to keep it.**
 """
-        if admin_settings.custom_caption:
-            f_caption = fname_caption + "\n\n" + admin_settings.custom_caption
-        elif f_caption is None:
-            f_caption = f"{files.file_name}"
-        f_caption = "**" + f_caption + "**"
-
-    if admin_settings.caption_uname:
-        f_caption = f_caption + "\n\n" + "**" + admin_settings.caption_uname + "**"
-
-    if isinstance(query, CallbackQuery):
-        mesg = query.message
-    elif isinstance(query, Message):
-        mesg = query
 
     # Define buttons
     buttons = [
