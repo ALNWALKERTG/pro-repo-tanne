@@ -389,7 +389,7 @@ async def get_files(bot, query):
 
 
 async def send_file(admin_settings, bot, query, user_id, file_id):
-   user = await bot.get_users(user_id)
+    user = await bot.get_users(user_id)
     mention_user = f"[{user.first_name}](tg://user?id={user.id})"
 
     filedetails = await get_file_details(file_id)
