@@ -31,11 +31,11 @@ HELP_KB = InlineKeyboardMarkup(
 
 
 #START_MSG = "Hi **[{}](tg://user?id={})**, I am a an autofilter bot which finds & shares media from my database."
-START_MSG ="""𝖧𝖾𝗒 <b><a href='tg://user?id={user_id}'>{name}</a></b>,𝖨 𝖠𝗆 <a href='@CinemaKalavaraFilmBot'>𝙎𝙀𝙀𝙏𝙃𝘼 𝙈𝘼𝙃𝘼𝙇𝘼𝙆𝙎𝙃𝙈𝙄🌺◤</a>
+START_MSG ="""**𝖧𝖾𝗒 <b><a href='tg://user?id={user_id}'>{name}</a></b>,𝖨 𝖠𝗆 <a href='@CinemaKalavaraFilmBot'>𝙎𝙀𝙀𝙏𝙃𝘼 𝙈𝘼𝙃𝘼𝙇𝘼𝙆𝙎𝙃𝙈𝙄🌺◤</a>**
 
-𝖨𝖺𝗆 𝖯𝗈𝗐𝖾𝗋𝖥𝗎𝗅𝗅 𝖠𝗎𝗍𝗈 𝖥𝗂𝗅𝗍𝖾𝗋 + 𝖬𝗈𝗏𝗂𝖾 𝖲𝖾𝖺𝗋𝖼𝗁 + 𝖬𝖺𝗇𝗎𝖺𝗅 𝖥𝗂𝗅𝗍𝖾𝗋 𝖡𝗈𝗍 ⚙
+**𝖨𝖺𝗆 𝖯𝗈𝗐𝖾𝗋𝖥𝗎𝗅𝗅 𝖠𝗎𝗍𝗈 𝖥𝗂𝗅𝗍𝖾𝗋 + 𝖬𝗈𝗏𝗂𝖾 𝖲𝖾𝖺𝗋𝖼𝗁 + 𝖬𝖺𝗇𝗎𝖺𝗅 𝖥𝗂𝗅𝗍𝖾𝗋 𝖡𝗈𝗍 ⚙**
 
-Here You Can Request Movie's, Just Sent <a href='https://t.me/CinemaKalavaraFilmBot'>Movie Name</a> With Proper <a href='https://www.google.com/'>Google</a> Spelling..!!</b>"""
+**Here You Can Request Movie's, Just Sent <a href='https://t.me/CinemaKalavaraFilmBot'>Movie Name</a> With Proper <a href='https://www.google.com/'>Google</a> Spelling..!!</b>**"""
 
 ST_HELP_MSG = """
 **You can find the bot commands here.**
