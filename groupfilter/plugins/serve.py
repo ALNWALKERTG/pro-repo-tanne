@@ -392,6 +392,8 @@ async def send_file(admin_settings, bot, query, user_id, file_id):
     user = await bot.get_users(user_id)
     mention_user = f"[{user.first_name}](tg://user?id={user.id})"
     filedetails = await get_file_details(file_id)
+    file_name = files.file_name  # Extract file name
+    file_size = files.file_size  # Extract file size (Make sure this attribute exists)
     f_caption = ""
     for files in filedetails:
         f_caption = f"""
