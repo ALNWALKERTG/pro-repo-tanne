@@ -22,9 +22,12 @@ async def check_fsub(
     if admin_settings:
         if admin_settings.fsub_msg:
             fsub_msg = admin_settings.fsub_msg
+            user = await bot.get_users(user_id)
+            mention_user = f"[{user.first_name}](tg://user?id={user.id})"
             txt = fsub_msg
         else:
-            txt = "**Please join below channel to get file!**"
+            txt = ""**Hey {mention_user},
+            🎙 Just click the Join My Update Channels button to obtain the file.**""
         if admin_settings.fsub_img:
             fsub_img = admin_settings.fsub_img
     try:
