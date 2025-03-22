@@ -389,14 +389,20 @@ async def get_files(bot, query):
 
 
 async def send_file(admin_settings, bot, query, user_id, file_id):
-    user = await bot.get_users(user_id)
+   user = await bot.get_users(user_id)
     mention_user = f"[{user.first_name}](tg://user?id={user.id})"
+
     filedetails = await get_file_details(file_id)
-    file_name = files.file_name  # Extract file name
-    file_size = files.file_size  # Extract file size (Make sure this attribute exists)
-    f_caption = ""
-    for files in filedetails:
-        f_caption = f"""
+    if not filedetails:
+        await query.reply_text("❌ File not found!")
+        return  
+
+    files = filedetails[0]  # Get first file details
+    file_name = files.file_name if files.file_name else "Unknown File"
+    file_size = humanize.naturalsize(files.file_size, binary=True) if hasattr(files, 'file_size') else "Unknown Size"
+
+    # Fully bold caption with proper formatting
+     f_caption = f"""
 **𝐻𝑒𝑙𝑙𝑜 👋 {mention_user}** 
 
 📂 **{file_name}**
@@ -409,8 +415,8 @@ async def send_file(admin_settings, bot, query, user_id, file_id):
 **♻️ 𝑱𝑶𝑰𝑵 :- [𝐂𝐇𝐀𝐍𝐍𝐄𝐋](https://t.me/CinemaKalavaraTG)**
 **╚═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╝**
 
-**⚠️  **𝗙𝗶𝗹𝗲𝘀 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 3 𝗠𝗶𝗻𝘂𝘁𝗲𝘀.**  
-**𝗜𝗳 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲, 𝗞𝗶𝗻𝗱𝗹𝘆 **𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲** 𝘁𝗼 𝗮𝗻𝘆 𝗰𝗵𝗮𝘁 (𝘀𝗮𝘃𝗲𝗱) 𝗮𝗻𝗱 𝘀𝘁𝗮𝗿𝘁 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱...**
+⚠️ **Files will be deleted in 3 minutes.**  
+**Forward this file to any chat (saved) to keep it.**
 """
         if admin_settings.custom_caption:
             f_caption = fname_caption + "\n\n" + admin_settings.custom_caption
