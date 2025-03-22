@@ -26,8 +26,7 @@ async def check_fsub(
             mention_user = f"[{user.first_name}](tg://user?id={user.id})"
             txt = fsub_msg
         else:
-            txt = ""**Hey {mention_user},
-            🎙 Just click the Join My Update Channels button to obtain the file.**""
+            txt =f"<b>Hey {mention_user},</b>\n\n<b>🎙 Just click the Join My Update Channels button to obtain the file.</b>"
         if admin_settings.fsub_img:
             fsub_img = admin_settings.fsub_img
     try:
