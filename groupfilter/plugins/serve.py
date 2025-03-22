@@ -389,11 +389,27 @@ async def get_files(bot, query):
 
 
 async def send_file(admin_settings, bot, query, user_id, file_id):
+    user = await bot.get_users(user_id)
+    mention_user = f"[{user.first_name}](tg://user?id={user.id})"
     filedetails = await get_file_details(file_id)
     f_caption = ""
     for files in filedetails:
-        f_caption = files.caption
-        fname_caption = f"📂 Fɪʟᴇɴᴀᴍᴇ : {files.file_name}"
+        f_caption = f"""
+**𝐻𝑒𝑙𝑙𝑜 👋 {mention_user}** 
+
+📂 **{file_name}**
+
+⚙️ **Fɪʟᴇ Sɪᴢᴇ :**  `{file_size}`
+
+╔═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╗
+♻️ 𝑱𝑶𝑰𝑵 :- [𝐆𝐑𝐎𝐔𝐏](https://t.me/TG_Moviesjunction)  
+♻️ 𝑱𝑶𝑰𝑵 :- [𝐎𝐓𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒](https://t.me/OTTUpdates)  
+♻️ 𝑱𝑶𝑰𝑵 :- [𝐂𝐇𝐀𝐍𝐍𝐄𝐋](https://t.me/MovieKingdomTG)  
+╚═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╝
+
+⚠️  **𝗙𝗶𝗹𝗲𝘀 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 3 𝗠𝗶𝗻𝘂𝘁𝗲𝘀.**  
+𝗜𝗳 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲, 𝗞𝗶𝗻𝗱𝗹𝘆 **𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲** 𝘁𝗼 𝗮𝗻𝘆 𝗰𝗵𝗮𝘁 (𝘀𝗮𝘃𝗲𝗱) 𝗮𝗻𝗱 𝘀𝘁𝗮𝗿𝘁 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱...
+"""
         if admin_settings.custom_caption:
             f_caption = fname_caption + "\n\n" + admin_settings.custom_caption
         elif f_caption is None:
